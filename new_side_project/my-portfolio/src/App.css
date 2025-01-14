@@ -1,0 +1,552 @@
+/* General Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  color: white;
+}
+
+/* Hero Section with Background and Overlay */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: url('/public/background.jpg') no-repeat center center;
+  background-size: cover;
+  backdrop-filter: blur(8px);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background: rgba(0, 0, 0, 0.6); /* Darker overlay */
+  pointer-events: none;
+}
+
+
+/* General Styling for Hero Text */
+.hero h1, .hero p {
+  color: #FFF; /* White color for text */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8); /* Enhanced shadow for better contrast */
+  margin-bottom: 10px; /* Reduced space between elements */
+  padding: 0; /* Removed padding to make text less bulky */
+}
+
+/* Specific Styling for Headline (h1) */
+.hero h1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Stylish, modern font */
+  font-size: 2.2em; /* Slightly smaller and more elegant */
+  font-weight: bold; /* Keeping it bold for emphasis */
+}
+
+/* Specific Styling for Paragraph (p) */
+.hero p {
+  font-family: 'Arial', sans-serif; /* Clean, simple font for readability */
+  font-size: 1.4em; /* Smaller size for a more refined look */
+  font-weight: normal; /* Normal weight to differentiate from headline */
+  letter-spacing: 0.5px; /* Slightly increased letter-spacing for elegance */
+}
+
+
+/* Button Styling */
+.button-with-light {
+  font-size: 20px;
+  padding: 12px 24px; /* Larger padding for better clickability */
+  background-color: black; /* Button color */
+  color: white;
+  border: 2px solid green; /* Optional: Adds a green border */
+  border-radius: 5px;
+  display: flex;
+  align-items: center; /* Aligns the text and light icon vertically */
+  cursor: pointer;
+  margin-top: 30px; /* Increased distance from the text above */
+}
+
+/* Light Animation */
+.light {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: green;
+  margin-right: 10px;
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Additional styling to ensure text next to the light is aligned */
+.button-text {
+  margin-left: 5px;
+}
+
+
+/* Typing Text Container */
+.typing-text {
+  width: 90%;
+  max-width: 900px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Main Typing Text Style */
+.main-text {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 50px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 4px 4px 12px rgba(0, 0, 0, 1); /* Increased shadow for better visibility */
+}
+
+/* Blinking Cursor Animation */
+@keyframes blink {
+  from {border-right-color: white;}
+  to {border-right-color: transparent;}
+}
+
+/* Subtext Styling */
+.sub-text span {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 1); /* Increased shadow for better visibility */
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* Button Styling */
+.button-with-light {
+  font-size: 20px;
+  padding: 12px 24px;
+  background-color: black;
+  color: white; /* Ensures text is white */
+  font-weight: 900; /* Extra bold */
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+/* Light Animation */
+.light {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: green;
+  margin-right: 10px;
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.special-text {
+  font-style: italic;
+  color: #ccc; /* Lighter color for emphasis, adjust as needed */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 1); /* Strong shadow to maintain readability */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Home Section Styling */
+.home-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 40px;
+  background-color: black; /* Keeps background black */
+  color: white;
+}
+
+/* Content Layout */
+.home-content {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around; /* Adjust spacing to accommodate layout changes */
+}
+
+/* Message Bubble Styling */
+.home-text {
+  background: #333; /* Dark gray for better contrast */
+  color: white;
+  padding: 40px; /* Increased padding for a more spacious layout */
+  border-radius: 20px; /* Smooth rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 18px; /* Suitable font size for better readability */
+  font-family: 'Roboto', sans-serif; /* Clean, modern font style */
+  width: 50%; /* Controlled width for content space */
+  min-height: 300px; /* Sufficient height for better text layout */
+  border: 3px solid #a55eea; /* Visual consistency */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  text-align: justify; /* Justify text for uniform alignment */
+  hyphens: auto; /* Enable hyphenation */
+}
+
+/* Additional CSS for handling overflow and word spacing */
+.home-text {
+  word-spacing: 1px; /* Adjust spacing between words if necessary */
+  overflow-wrap: break-word; /* Ensures words do not overflow the container */
+}
+
+
+/* Profile Picture Styling */
+.home-image {
+  width: 35vw; /* Increased width for a larger profile picture */
+  height: 35vw; /* Maintain aspect ratio, keeping the image circular */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 8px solid #a55eea; /* Maintained border thickness for style consistency */
+  box-shadow: 0 0 30px rgba(162, 155, 254, 0.7); /* Increased shadow for more depth */
+  overflow: hidden;
+}
+
+/* Hover Effect for Profile Picture */
+.home-image img:hover {
+  transform: scale(1.05); /* Maintained zoom effect for interactivity */
+  box-shadow: 0 0 50px rgba(162, 155, 254, 0.8); /* Enhanced shadow effect on hover */
+}
+
+
+
+
+/* Experience Section Styling */
+.experience-section {
+  padding: 60px 20px;
+  background-color: black; /* Ensure the entire section is black */
+  color: white;
+  text-align: center;
+}
+
+/* Section Title Styling */
+.section-title {
+  font-size: 48px;
+  margin-bottom: 40px;
+  color: #9b59b6; /* Purple color for title text */
+  text-transform: uppercase;
+}
+
+/* Experience Cards Layout */
+.experience-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.experience-card {
+  background-color: black; /* Set card background to black */
+  width: 300px;
+  height: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Adjust shadow for visibility */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.experience-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(155, 89, 182, 0.6); /* Adjust hover effect if needed */
+}
+
+.experience-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.experience-card h3 {
+  font-size: 18px;
+  color: #9b59b6; /* Maintaining purple color for headings */
+  margin: 20px;
+}
+
+
+.experience-card p {
+  font-size: 14px;
+  color: #dcdcdc; /* Light grey text for readability */
+  margin: 0 20px 20px;
+  line-height: 1.6;
+}
+
+
+/* Projects Section Styling */
+.projects-section {
+  padding: 60px 20px;
+  background-color: black; /* Set the background to black */
+  color: white;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 48px;
+  margin-bottom: 40px;
+  color: #9b59b6;
+  text-transform: uppercase;
+}
+
+/* Horizontal Scroll Container with Scrollbar */
+.projects-scroll-container {
+  display: flex;
+  overflow-x: scroll;
+  gap: 20px;
+  padding-bottom: 20px;
+  scroll-behavior: smooth;
+  border-bottom: 2px solid #9b59b6; /* Optional border for styling */
+}
+
+/* Custom Scrollbar Styling */
+.projects-scroll-container::-webkit-scrollbar {
+  height: 10px;
+}
+
+.projects-scroll-container::-webkit-scrollbar-thumb {
+  background-color: #9b59b6;
+  border-radius: 5px;
+}
+
+.projects-scroll-container::-webkit-scrollbar-track {
+  background-color: #1e1e1e;
+}
+
+/* Project Card Styling */
+.project-card {
+  background-color: #1e1e1e;
+  width: 300px;
+  height: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  flex: 0 0 auto; /* Ensures horizontal scroll works */
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(155, 89, 182, 0.6);
+}
+
+/* Project Card Image */
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Project Card Title */
+.project-card h3 {
+  font-size: 18px;
+  color: #9b59b6;
+  margin: 20px 0;
+  padding: 0 20px;
+}
+
+/* See More Button */
+.see-more-btn {
+  display: inline-block;
+  margin: 20px;
+  padding: 12px 20px;
+  background-color: #9b59b6;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.see-more-btn:hover {
+  background-color: #8e44ad;
+}
+/* Contact Section Styling */
+.contact-section {
+  padding: 100px 20px;  /* Adequate vertical padding */
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 60px;  /* Larger font size for impact */
+  margin-bottom: 30px;  /* Reduced spacing below the title */
+  color: #8e44ad;  /* Gold color for emphasis */
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;  /* Slightly more letter spacing */
+}
+
+.contact-content {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.social-links {
+  font-size: 24px;  /* Size of social icons */
+  margin-top: 20px;
+}
+
+.social-links a {
+  color: #8e44ad;  /* Gold color for icons */
+  margin: 0 15px;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #e0aaff;
+}
+
+
+/* Initial state of the elements before they become visible */
+.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* State of the elements when they become visible */
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.skills-section {
+  background-color: #000; /* Set the background of the section to black */
+  padding: 20px 0;
+}
+
+.skills-title {
+  text-align: center;
+  font-size: 40px; /* Slightly reduced for smaller headings */
+  color: #9b59b6; /* Maintaining the color scheme */
+  margin-bottom: 30px; /* Less space below the title */
+}
+
+.skills-container {
+  width: 100%;
+  height: 120px; /* Smaller container height */
+  overflow: hidden; /* Keep all content clipped to the container size */
+  background-color: #000;
+}
+
+.skills-slider {
+  display: flex;
+  white-space: nowrap;
+  animation: scroll-left 60s linear infinite; /* Continuous scroll effect */
+}
+
+.skills-slider img {
+  height: 100px; /* Smaller images */
+  margin-right: 20px; /* Reduced spacing between images */
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(calc(-100% / 2)); /* Adjust for seamless loop */
+  }
+}
+
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out forwards;
+  visibility: hidden;
+}
+
+.section.visible {
+  visibility: visible;
+  animation-delay: 0.3s;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(155, 89, 182, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(155, 89, 182, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(155, 89, 182, 0);
+  }
+}
+
+.see-more-btn {
+  animation: pulse 2s infinite;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(155, 89, 182, 0.5);
+}
+
+.glowing-title {
+  background: linear-gradient(45deg, #9b59b6, #8e44ad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glow 2s infinite alternate;
+}
+
+.hero {
+  background: linear-gradient(270deg, #9b59b6, #8e44ad, #9b59b6);
+  background-size: 600% 600%;
+  animation: AnimatedGradient 30s infinite;
+}
+
+@keyframes AnimatedGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
