@@ -6,7 +6,7 @@ function TypingText() {
   const [subText, setSubText] = useState('');
   const [isFinished, setIsFinished] = useState(false);
 
-  const mainText = 'print("NOT YOUR AVERAGE SOFTWARE ENGINEER");';
+  const mainText = 'prrint("NOT YOUR AVERAGE SOFTWARE ENGINEER");';
   const preIdeaText = 'Get ready to turn your ';
   const ideaText = 'ideas';
   const postIdeaText = ' into ';
