@@ -1,6 +1,6 @@
 {
-  "name": "my-portfolio",
-  "homepage": "https://gitname.github.io/react-gh-pages",
+  "name": "hadis-fa-portfolio",
+  "homepage": "https://hadis-fa.github.io/react-gh-pages",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
