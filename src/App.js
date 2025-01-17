@@ -131,7 +131,7 @@ function App() {
           <div className="project-card">
             <img src="/musical.jpg" alt="Project 1" />
             <h3>Musical Keyboard</h3>
-            <a href="-" target="_blank" className="see-more-btn">Click to See More</a>
+            <a href="https://github.com/Hadis-fa/musical-keyboard.git" target="_blank" className="see-more-btn">Click to See More</a>
           </div>
           <div className="project-card">
             <img src="/categorize.jpg" alt="Project 2" />
