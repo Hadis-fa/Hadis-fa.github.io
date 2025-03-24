@@ -175,7 +175,7 @@ function App() {
                 <img src="/html.png" alt="HTML/CSS" />
                 <img src="/php.png" alt="PHP" />
                 <img src="/c++.png" alt="C++" />
-                <img src="/Javascript.webp" alt="Javascript" />
+                <img src="/javascript.webp" alt="Javascript" />
                 {/* Add more images as needed */}
               </React.Fragment>
             ))}
